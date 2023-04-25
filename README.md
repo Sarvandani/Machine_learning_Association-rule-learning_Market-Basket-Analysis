@@ -13,12 +13,15 @@ The number of sale per customers for every day, every week and each month:
 <img src="sale_per_client.png" width="800" height="300">
 
 best selling items:
+
 <img src="best_sale.png" width="800" height="400">
 
 Results of apriori:
+
 <img src="apriori.png" width="800" height="400">
 
 
 Results of FP growth:
+
 <img src="fp.png" width="800" height="400">
 
