@@ -25,3 +25,4 @@ Results of FP growth:
 
 <img src="fp.png" width="800" height="400">
 
+`DISCLAIMER`:  I don't warrant this code in any way whatsoever. This code is provided "as-is" to be used at your own risk.
