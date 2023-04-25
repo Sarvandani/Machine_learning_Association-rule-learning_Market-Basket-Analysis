@@ -18,6 +18,7 @@ best selling items:
 Results of apriori:
 <img src="apriori.png" width="800" height="400">
 
+
 Results of FP growth:
 <img src="fp.png" width="800" height="400">
 
