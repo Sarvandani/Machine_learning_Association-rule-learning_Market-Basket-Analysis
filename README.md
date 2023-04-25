@@ -11,3 +11,7 @@ The number of customers per month, week, and day has been plotted to see the var
 
 The number of sale per customers for every day, every week and each month:
 <img src="sale_per_client.png" width="800" height="300">
+
+best selling items:
+<img src="best_sale.png" width="800" height="400">
+
