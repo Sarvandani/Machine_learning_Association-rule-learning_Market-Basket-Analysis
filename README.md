@@ -24,7 +24,7 @@ best selling items:
 
 <img src="best_sale.png" width="800" height="400">
 
-# What is Apriori Algorithm?
+# What is Apriori Algorithm in market basket analysis?
 
 The most well-known algorithm for association rule learning is the Apriori algorithm, which works by identifying frequent itemsets (i.e., combinations of items that occur together frequently) and then generating association rules from those itemsets. An association rule is a statement that indicates the likelihood of one item being purchased given that another item has been purchased.
 
