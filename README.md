@@ -3,6 +3,13 @@
 # What is Association rule learning?
 
 Association rule learning is a machine learning technique used to identify patterns, associations, and relationships between variables in large datasets. It is often applied in market basket analysis, where the goal is to discover which products are frequently bought together by customers.
+In market basket analysis, confidence, support, and lift are used to measure the strength of association between items purchased by customers.
+
+1. Confidence: Confidence in market basket analysis measures the conditional **probability** of a product Y being purchased given that product X has already been purchased. A high confidence value indicates that customers who bought item X are likely to also buy item Y. 
+
+2. Support: Support measures the **frequency of occurrence** of an item or a set of items in all transactions. A high support value indicates that the item or set of items is frequently bought together by customers.
+
+3. Lift: Lift measures the strength of association between two items by comparing the observed frequency of co-occurrence of both items with the expected frequency of co-occurrence under the assumption that the items are independent. A lift value greater than 1 indicates that the items are positively correlated, a lift value of 1 indicates no correlation, and a lift value less than 1 indicates that they are negatively correlated. A high lift value indicates that the two items are likely to be bought together, and the lift value can be used to identify strong association rules between items.
 
 # 
 
