@@ -24,6 +24,12 @@ best selling items:
 
 <img src="best_sale.png" width="800" height="400">
 
+# What is Apriori Algorithm?
+
+The most well-known algorithm for association rule learning is the Apriori algorithm, which works by identifying frequent itemsets (i.e., combinations of items that occur together frequently) and then generating association rules from those itemsets. An association rule is a statement that indicates the likelihood of one item being purchased given that another item has been purchased.
+
+For example, if customers who buy milk and bread also tend to buy eggs, then an association rule could be "milk and bread imply the purchase of eggs". These rules can be used to provide insights into consumer behavior, to inform marketing strategies, and to make recommendations for complementary products.
+
 Results of apriori:
 
 <img src="apriori.png" width="800" height="400">
