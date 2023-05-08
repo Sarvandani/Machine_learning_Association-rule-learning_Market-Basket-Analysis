@@ -1,5 +1,9 @@
 # Machine learning Association rule learning Market Basket Analysis
 
+# what is Association rule learning?
+
+Association rule learning is a machine learning technique used to identify patterns, associations, and relationships between variables in large datasets. It is often applied in market basket analysis, where the goal is to discover which products are frequently bought together by customers.
+
 Two approaches of Asscoaite rule learning, known as appriori and FP growth, have been used to do a market basket analysis.
 My code is very simple to understand and can be extended by more analysis.
 
