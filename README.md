@@ -43,7 +43,7 @@ Results of apriori:
 
 # What is Frequent Pattern (FP) growth?
 
-Frequent Pattern (FP) growth is a popular algorithm used for mining frequent itemsets in a transactional dataset. It is an efficient algorithm for finding frequent patterns without generating candidate sets, which is a bottleneck in many other algorithms such as Apriori. The FP-growth algorithm builds a compact data structure, called a frequent pattern tree (FP-tree), to represent the transactional dataset. This data structure enables efficient counting of frequent itemsets by compressing the original dataset into a set of conditional databases. The algorithm recursively constructs the FP-tree by repeatedly finding frequent items and creating conditional databases, which are then recursively processed until no more frequent itemsets can be found.
+Frequent Pattern (FP) growth is a popular algorithm used for mining frequent itemsets in a transactional dataset. The FP-growth algorithm builds a compact data structure, called a frequent pattern tree (FP-tree), to represent the transactional dataset. This data structure enables efficient counting of frequent itemsets by compressing the original dataset into a set of conditional databases. The algorithm recursively constructs the FP-tree by repeatedly finding frequent items and creating conditional databases, which are then recursively processed until no more frequent itemsets can be found.
 
 Results of FP growth:
 
