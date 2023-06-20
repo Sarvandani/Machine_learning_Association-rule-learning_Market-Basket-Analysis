@@ -202,7 +202,11 @@ plt.show()
 ![png](associate_market_basket_files/associate_market_basket_7_1.png)
     
 
+## What is Apriori Algorithm in market basket analysis?
 
+The most well-known algorithm for association rule learning is the Apriori algorithm, which works by identifying frequent itemsets (i.e., combinations of items that occur together frequently) and then generating association rules from those itemsets. An association rule is a statement that indicates the likelihood of one item being purchased given that another item has been purchased.
+
+For example, if customers who buy milk and bread also tend to buy eggs, then an association rule could be "milk and bread imply the purchase of eggs". These rules can be used to provide insights into consumer behavior, to inform marketing strategies, and to make recommendations for complementary products.
 
 ```python
 ##Data preparation and modeling
@@ -217,11 +221,9 @@ def one_hot_encoder(k):
 Transactions = Transactions.iloc[:, 1:Transactions.shape[1]].applymap(one_hot_encoder)
 # Transactions.head()
 
-# What is Apriori Algorithm in market basket analysis?
 
-The most well-known algorithm for association rule learning is the Apriori algorithm, which works by identifying frequent itemsets (i.e., combinations of items that occur together frequently) and then generating association rules from those itemsets. An association rule is a statement that indicates the likelihood of one item being purchased given that another item has been purchased.
 
-For example, if customers who buy milk and bread also tend to buy eggs, then an association rule could be "milk and bread imply the purchase of eggs". These rules can be used to provide insights into consumer behavior, to inform marketing strategies, and to make recommendations for complementary products.
+
 
 
 ##associate learning 1: apriori
@@ -231,10 +233,6 @@ results1 = association_rules(frequent_items1, metric="lift", min_threshold=1).so
 results1 = results1[['antecedents', 'consequents', 'support', 'confidence', 'lift']]
 results1.head(100)
 ```
-
-
-
-
 
 
 <div>
