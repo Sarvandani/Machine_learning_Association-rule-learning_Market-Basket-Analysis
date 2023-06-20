@@ -216,6 +216,14 @@ def one_hot_encoder(k):
         return 1
 Transactions = Transactions.iloc[:, 1:Transactions.shape[1]].applymap(one_hot_encoder)
 # Transactions.head()
+
+# What is Apriori Algorithm in market basket analysis?
+
+The most well-known algorithm for association rule learning is the Apriori algorithm, which works by identifying frequent itemsets (i.e., combinations of items that occur together frequently) and then generating association rules from those itemsets. An association rule is a statement that indicates the likelihood of one item being purchased given that another item has been purchased.
+
+For example, if customers who buy milk and bread also tend to buy eggs, then an association rule could be "milk and bread imply the purchase of eggs". These rules can be used to provide insights into consumer behavior, to inform marketing strategies, and to make recommendations for complementary products.
+
+
 ##associate learning 1: apriori
 frequent_items1 = apriori(Transactions, min_support=0.027, use_colnames=True, max_len=3).sort_values(by='support')
 frequent_items1.head(10)
@@ -349,6 +357,9 @@ results1.head(100)
 </div>
 
 
+# What is Frequent Pattern (FP) growth?
+
+Frequent Pattern (FP) growth is a popular algorithm used for mining frequent itemsets in a transactional dataset. The FP-growth algorithm builds a compact data structure, called a frequent pattern tree (FP-tree), to represent the transactional dataset. This data structure enables efficient counting of frequent itemsets by compressing the original dataset into a set of conditional databases. The algorithm recursively constructs the FP-tree by repeatedly finding frequent items and creating conditional databases, which are then recursively processed until no more frequent itemsets can be found.
 
 
 ```python
@@ -360,10 +371,7 @@ results2 = results2[['antecedents', 'consequents', 'support', 'confidence', 'lif
 results2.head(10)
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/mlxtend/frequent_patterns/fpcommon.py:110: DeprecationWarning: DataFrames with non-bool types result in worse computationalperformance and their support might be discontinued in the future.Please use a DataFrame with bool type
-      warnings.warn(
+ 
 
 
 
