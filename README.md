@@ -55,10 +55,6 @@ print(nan_values)
     dtype: int64
 
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
-
-
 
 ```python
 ##Basket analysis: we can see the bought products of clients for everyday
