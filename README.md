@@ -65,9 +65,6 @@ clinet_basket2 = [a[1]['itemDescription'].tolist() for a in list(dataset.groupby
 print(clinet_basket2[0:10])
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
-
 
     Member_number  Date      
     1000           15-03-2015           sausagewhole milksemi-finished breadyogurt
@@ -87,7 +84,7 @@ print(clinet_basket2[0:10])
 
 
 ```python
-#Converting Date into datetime type
+#Converting Date into DateTime type
 Date=dataset.set_index(['Date'])
 Date.index=pd.to_datetime(Date.index, infer_datetime_format= True)
 ```
@@ -96,8 +93,9 @@ Date.index=pd.to_datetime(Date.index, infer_datetime_format= True)
 
 
 ```python
-## data analysis
-#Items Sold 
+## Data analysis
+#The items sold per month, week, and day have been plotted to see the variations and the average level of sale.
+
 fig1 = plt.figure("Figure 1")
 ax = plt.axes()
 ax.set_facecolor('silver')
@@ -108,11 +106,6 @@ color='blue').set(xlabel="Date", ylabel="Total Number of Items Sold")
 Date.resample("M")['itemDescription'].count().plot(figsize=(12,5), grid=True,
 color='red',title="Items Sold per month in red, per week in blue and per day in black").set(xlabel="Date", ylabel="Total Number of Items Sold")
 ```
-
-
-
-
-
 
 
     [Text(0.5, 0, 'Date'), Text(0, 0.5, 'Total Number of Items Sold')]
@@ -127,7 +120,8 @@ color='red',title="Items Sold per month in red, per week in blue and per day in 
 
 
 ```python
-#Number of customers
+#The number of customers per month, week, and day has been plotted to see the variations and the average number of customers.
+
 fig2 = plt.figure("Figure 2")
 ax = plt.axes()
 ax.set_facecolor('silver')
@@ -157,7 +151,8 @@ color='red',title="Number of customers per month in red, per week in blue and pe
 
 
 ```python
-#sale per customer
+#The number of sales per customer for every day, every week, and each month:
+
 fig3 = plt.figure("Figure 3")
 ax = plt.axes()
 day_ratio = Date.resample("D")['itemDescription'].count()/Date.resample('D')['Member_number'].nunique()
@@ -174,10 +169,6 @@ color='red', title = "Sale per customers per month in red, per week in blue and 
 
 
 
-
-
-
-
     [Text(0.5, 0, 'Date'), Text(0, 0.5, 'Sale per customer')]
 
 
@@ -189,7 +180,7 @@ color='red', title = "Sale per customers per month in red, per week in blue and 
 
 
 
-```python
+```Python
 #5 best seller items 
 Item_distr = dataset.groupby(by = 'itemDescription').size().reset_index(name='Frequency').sort_values(by = 'Frequency',ascending=False).head(5)
 bars = Item_distr["itemDescription"]
@@ -215,7 +206,7 @@ plt.show()
 
 ```python
 ##Data preparation and modeling
-## Before modeling, transaction must be one-hot
+## Before modeling, the transaction must be one-hot
 Transactions = dataset.groupby(['Member_number', 'itemDescription'])['itemDescription'].count().unstack().fillna(0).reset_index()
 Transactions.head()
 def one_hot_encoder(k):
