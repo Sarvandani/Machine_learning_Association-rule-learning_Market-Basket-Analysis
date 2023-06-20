@@ -61,7 +61,7 @@ print(nan_values)
 
 
 ```python
-##Basket analysis: we can see the bought products of clients for every day
+##Basket analysis: we can see the bought products of clients for everyday
 client_basket=dataset.groupby(['Member_number','Date'])['itemDescription'].apply(sum)
 print(client_basket)
 ## we can see the bought products of clients for every day withot client number
@@ -96,9 +96,7 @@ Date=dataset.set_index(['Date'])
 Date.index=pd.to_datetime(Date.index, infer_datetime_format= True)
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
-
+ 
 
 
 ```python
@@ -115,8 +113,7 @@ Date.resample("M")['itemDescription'].count().plot(figsize=(12,5), grid=True,
 color='red',title="Items Sold per month in red, per week in blue and per day in black").set(xlabel="Date", ylabel="Total Number of Items Sold")
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
+
 
 
 
@@ -146,8 +143,7 @@ Date.resample('M')['Member_number'].nunique().plot(figsize=(12,5), grid=True,
 color='red',title="Number of customers per month in red, per week in blue and per day in black").set(xlabel="Date", ylabel="Total Number of Items Sold")
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
+ 
 
 
 
@@ -180,8 +176,7 @@ color='red', title = "Sale per customers per month in red, per week in blue and 
 
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
+
 
 
 
@@ -212,8 +207,7 @@ plt.xticks(x_pos, bars)
 plt.show()
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
+
 
 
 
@@ -224,8 +218,8 @@ plt.show()
 
 
 ```python
-##Data preaparation and modeling
-## before modeling, transcastion must be one-hot
+##Data preparation and modeling
+## Before modeling, transaction must be one-hot
 Transactions = dataset.groupby(['Member_number', 'itemDescription'])['itemDescription'].count().unstack().fillna(0).reset_index()
 Transactions.head()
 def one_hot_encoder(k):
@@ -243,10 +237,6 @@ results1 = results1[['antecedents', 'consequents', 'support', 'confidence', 'lif
 results1.head(100)
 ```
 
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/ipykernel/ipkernel.py:287: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
-      and should_run_async(code)
-    /Users/mohamadians/opt/anaconda3/lib/python3.8/site-packages/mlxtend/frequent_patterns/fpcommon.py:110: DeprecationWarning: DataFrames with non-bool types result in worse computationalperformance and their support might be discontinued in the future.Please use a DataFrame with bool type
-      warnings.warn(
 
 
 
