@@ -222,11 +222,6 @@ def one_hot_encoder(k):
 Transactions = Transactions.iloc[:, 1:Transactions.shape[1]].applymap(one_hot_encoder)
 # Transactions.head()
 
-
-
-
-
-
 ##associate learning 1: apriori
 frequent_items1 = apriori(Transactions, min_support=0.027, use_colnames=True, max_len=3).sort_values(by='support')
 frequent_items1.head(10)
@@ -369,11 +364,6 @@ results2 = association_rules(frequent_items2, metric="lift", min_threshold=1).so
 results2 = results2[['antecedents', 'consequents', 'support', 'confidence', 'lift']]
 results2.head(10)
 ```
-
- 
-
-
-
 
 
 <div>
